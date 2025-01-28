@@ -12,10 +12,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SpeedcheckerSDK",
-            targets: ["SpeedcheckerSDK", "XMLParsing", "Socket", "DataCompression"]),
+            targets: ["SpeedcheckerSDK", "XMLParsing", "SpeedCheckerSocket", "DataCompression"]),
             .library(
             name: "SpeedcheckerReportSDK",
-            targets: ["SpeedcheckerSDK", "SpeedcheckerReportSDK", "XMLParsing", "Socket", "DataCompression"])
+            targets: ["SpeedcheckerSDK", "SpeedcheckerReportSDK", "XMLParsing", "SpeedCheckerSocket", "DataCompression"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -37,7 +37,7 @@ let package = Package(
             path: "Framework/XMLParsing.xcframework"
         ),
         .binaryTarget(
-            name: "Socket",
+            name: "SpeedCheckerSocket",
             path: "Framework/Socket.xcframework"
         ),
         .binaryTarget(
